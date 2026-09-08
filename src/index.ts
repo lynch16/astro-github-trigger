@@ -1,7 +1,7 @@
 import * as github from "@actions/github";
 import { env } from "cloudflare:workers";
 
-async function main() {
+export default async function main() {
 	const octokit = github.getOctokit((env as any).GITHUB_TOKEN);
 
 	await octokit.request('POST /repos/{owner}/{repo}/actions/workflows/{workflow_id}/dispatches', {
@@ -14,4 +14,3 @@ async function main() {
 		}
 	})
 }
-main();
