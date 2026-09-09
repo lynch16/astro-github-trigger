@@ -4,7 +4,7 @@ import * as modal from "modal";
 
 const owner = "lynch16";
 const repo = 'astro-campaign-site';
-const workflow_id = '.github/workflows/db-check.yml'
+const workflow_id = 'db-check.yml'
 
 export default {
 	async scheduled(controller: any, env: any, ctx: any){
