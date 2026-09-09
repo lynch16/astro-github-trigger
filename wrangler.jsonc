@@ -7,7 +7,7 @@
 	"name": "astro-github-trigger",
 	"main": "src/index.ts",
 	"compatibility_date": "2026-09-07",
-	"compatibility_flags": [ "nodejs_compat" ],
+	"compatibility_flags": [ "nodejs_compat", "nodejs_compat_v2", "nodejs_als" ],
 	"observability": {
 		"enabled": true
 	},
