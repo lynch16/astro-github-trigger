@@ -1,4 +1,6 @@
 import * as github from "@actions/github";
+// https://github.com/modal-labs/libmodal/issues/118
+import * as modal from "modal";
 
 export default {
 	async scheduled(controller: any, env: any, ctx: any){

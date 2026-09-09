@@ -18,6 +18,7 @@
   },
   "dependencies": {
     "@actions/github": "^9.1.1",
-    "cloudflare": "^7.1.0"
+    "cloudflare": "^7.1.0",
+    "modal": "^0.10.0"
   }
 }
