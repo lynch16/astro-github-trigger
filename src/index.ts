@@ -8,7 +8,7 @@ const workflow_id = '.github/workflows/db-check.yml'
 
 export default {
 	async scheduled(controller: any, env: any, ctx: any){
-		await fetch(
+		const response = await fetch(
 			`https://api.github.com/repos/${owner}/${repo}/actions/workflows/${workflow_id}/dispatches`,
 			{
 				method: "POST",
@@ -20,6 +20,10 @@ export default {
 					"User-Agent": "lynch16"
 				}
 			}
-		)
+		);
+
+		if (!response.ok) {
+			throw new Error(`Response status: ${response.status} - ${response.statusText}`)
+		}
 	}
 }
